@@ -1,0 +1,25 @@
+<div class="person-card theme-{{theme}}" *ngIf='person'>
+  <div class="person-wrap">
+    <div class="name">{{person.name}}</div>
+
+    <div class="person-info">
+      <div class="person-info-item">
+        <div class="weight-value-small">{{person.weightInitial}}<span class="small">кг</span></div>
+        <h3>Изначально</h3>
+        <h4>16/01/2023</h4>
+      </div>
+      <div class="person-info-item">
+        <div class="weight-value-small positive">{{person.weightLost}}<span class="small">кг</span></div>
+        <h3>{{this.motivateMessage}}</h3>
+      </div>
+      <div class="person-info-item">
+        <div class="weight-value-small">{{person.weightCurrent}}<span class="small">кг</span></div>
+        <h3>Текущий</h3>
+        <h4>{{today | date: 'dd/MM/yyyy'}}</h4>
+      </div>
+    </div>
+
+  </div>
+
+  <app-progress-bar-circular goal="{{person.weightGoal}}" percent="{{person.percent}}" theme="{{theme}}"></app-progress-bar-circular>
+</div>

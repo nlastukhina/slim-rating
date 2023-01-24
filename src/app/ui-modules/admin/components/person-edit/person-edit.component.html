@@ -1,0 +1,8 @@
+<div *ngIf='person'>
+  <h3>{{person.name}}</h3>
+  <div class="person-wrap"><input [(ngModel)]="person.weightCurrent" (blur)="calculate()" /></div>
+</div>
+
+
+
+

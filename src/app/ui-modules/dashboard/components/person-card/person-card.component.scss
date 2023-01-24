@@ -1,0 +1,113 @@
+@import 'project.config';
+
+@mixin theme-settings($color-light, $color-bright) {
+  background: $color-bright;
+}
+
+:host {
+  display: block;
+}
+
+.person-card {
+  display: flex;
+  justify-content: space-between;
+  margin: rem(0 0 8);
+  padding: rem(10);
+  border-radius: rem(8);
+
+  &.theme-amethyst {
+    @include theme-settings(#ffc0df, #ce3d95);
+  }
+
+  &.theme-citrine {
+    @include theme-settings(#fbd9b0, #f48132);
+  }
+
+  &.theme-emerald {
+    @include theme-settings(#c9f6b7, #72be44);
+  }
+
+  &.theme-sapphire {
+    @include theme-settings(#bbeef9, #00a8c8);
+  }
+
+  &.theme-purple {
+    @include theme-settings(#ccb3e0, #8246af);
+  }
+
+  &.theme-ruby {
+    @include theme-settings(#f7b6bb, #ed2c67);
+  }
+
+  &.theme-gray {
+    @include theme-settings(#999, #666);
+  }
+}
+
+.person-wrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: rem(20);
+  font-weight: 600;
+  color: $white;
+  opacity: 0.8;
+}
+
+h3,
+h4 {
+  text-align: left;
+  color: $white;
+  opacity: 0.8;
+}
+
+h3 {
+  margin: rem(4 0 2);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: rem(12);
+}
+
+h4 {
+  margin: 0;
+  font-size: rem(10);
+  color: $white;
+  opacity: 0.8;
+}
+
+.person-info {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.person-info-item {
+  flex: 1;
+  margin: rem(0 8 0 0);
+}
+
+.weight-value {
+  font-size: rem(40);
+}
+
+.weight-value-small {
+  font-size: rem(20);
+  font-weight: 600;
+  color: $white;
+}
+
+.initial {
+  margin-top: rem(10);
+  text-align: center;
+  font-size: rem(12);
+  color: $onyx-dark-60;
+}
+
+.small {
+  font-size: rem(10);
+}
